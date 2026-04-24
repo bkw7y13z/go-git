@@ -42,3 +42,6 @@ require (
 //   - golang.org/x/crypto and golang.org/x/net pinned to specific versions to
 //     avoid a breaking change introduced in newer releases (observed locally).
 //   - dagger.io/dagger is only used in CI scripts; not needed for library consumers.
+//   - TODO: investigate replacing github.com/acomagu/bufpipe with the stdlib
+//     io.Pipe equivalent once I better understand where it's used in the
+//     fetch/push code paths.
