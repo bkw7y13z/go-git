@@ -45,3 +45,6 @@ require (
 //   - TODO: investigate replacing github.com/acomagu/bufpipe with the stdlib
 //     io.Pipe equivalent once I better understand where it's used in the
 //     fetch/push code paths.
+//   - TODO: github.com/armon/go-socks5 appears to be unmaintained (last commit
+//     2016); worth checking if golang.org/x/net/proxy covers the same use case
+//     before the next dependency audit.
