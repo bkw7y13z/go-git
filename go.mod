@@ -34,3 +34,6 @@ require (
 	golang.org/x/sys v0.16.0 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 )
+
+// Personal fork - tracking upstream go-git/go-git for learning purposes.
+// Upstream: https://github.com/go-git/go-git
