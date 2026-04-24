@@ -37,3 +37,8 @@ require (
 
 // Personal fork - tracking upstream go-git/go-git for learning purposes.
 // Upstream: https://github.com/go-git/go-git
+//
+// Notes:
+//   - golang.org/x/crypto and golang.org/x/net pinned to specific versions to
+//     avoid a breaking change introduced in newer releases (observed locally).
+//   - dagger.io/dagger is only used in CI scripts; not needed for library consumers.
