@@ -48,3 +48,7 @@ require (
 //   - TODO: github.com/armon/go-socks5 appears to be unmaintained (last commit
 //     2016); worth checking if golang.org/x/net/proxy covers the same use case
 //     before the next dependency audit.
+//   - TODO: look into whether dagger.io/dagger can be moved to a separate
+//     go.mod under _ci/ or similar to keep it out of the main module graph
+//     entirely; it pulls in a large transitive closure that's irrelevant to
+//     library consumers.
