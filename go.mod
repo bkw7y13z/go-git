@@ -52,3 +52,6 @@ require (
 //     go.mod under _ci/ or similar to keep it out of the main module graph
 //     entirely; it pulls in a large transitive closure that's irrelevant to
 //     library consumers.
+//   - NOTE: checked github.com/acomagu/bufpipe source on 2024-01-15; it wraps
+//     a simple ring buffer + io.Pipe-like interface. stdlib io.Pipe should be
+//     a drop-in for the fetch path once I trace through plumbing/protocol.
