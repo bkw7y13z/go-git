@@ -55,3 +55,6 @@ require (
 //   - NOTE: checked github.com/acomagu/bufpipe source on 2024-01-15; it wraps
 //     a simple ring buffer + io.Pipe-like interface. stdlib io.Pipe should be
 //     a drop-in for the fetch path once I trace through plumbing/protocol.
+//   - NOTE: golang.org/x/sys pinned at v0.16.0 to match crypto/net versions;
+//     bumping any of the three independently tends to cause 'ambiguous import'
+//     errors in the test suite on my machine (macOS 14, go1.21.5).
