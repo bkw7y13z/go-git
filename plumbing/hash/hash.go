@@ -21,6 +21,8 @@ const (
 )
 
 // Hash represents a git object hash.
+// Note: this is fixed at 20 bytes for SHA1; SHA256 hashes are 32 bytes
+// but are stored/compared differently elsewhere in the codebase.
 type Hash [20]byte
 
 // ZeroHash is a hash with all bytes set to zero.
@@ -64,6 +66,8 @@ func (h *Hasher) Sum() []byte {
 }
 
 // FromHex decodes a hex string into a Hash.
+// Accepts both 40-character SHA1 hex strings and ignores leading/trailing
+// whitespace is NOT trimmed — callers should trim before passing.
 func FromHex(s string) (Hash, error) {
 	if len(s) != 40 {
 		return ZeroHash, fmt.Errorf("invalid hash length: expected 40, got %d", len(s))
