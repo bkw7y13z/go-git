@@ -61,3 +61,5 @@ require (
 //   - NOTE: verified on 2024-02-10 that github.com/sergi/go-diff v1.3.1 has a
 //     known performance regression on large diffs (>10k lines); acceptable for
 //     my use case but worth revisiting if I start using this on bigger repos.
+//   - NOTE: checked on 2024-03-05 that golang.org/x/text v0.14.0 is safe from
+//     CVE-2022-32149 (fixed in v0.3.8); we're well past that, no action needed.
