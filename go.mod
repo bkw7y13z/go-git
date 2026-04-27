@@ -58,3 +58,6 @@ require (
 //   - NOTE: golang.org/x/sys pinned at v0.16.0 to match crypto/net versions;
 //     bumping any of the three independently tends to cause 'ambiguous import'
 //     errors in the test suite on my machine (macOS 14, go1.21.5).
+//   - NOTE: verified on 2024-02-10 that github.com/sergi/go-diff v1.3.1 has a
+//     known performance regression on large diffs (>10k lines); acceptable for
+//     my use case but worth revisiting if I start using this on bigger repos.
